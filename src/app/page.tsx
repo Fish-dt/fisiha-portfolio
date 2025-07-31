@@ -22,6 +22,8 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import ProfileImageWithBorder from "../components/ProfileImageWithBorder";
+import FloatingInfoBox from "../components/FloatingInfoBox";
 
 export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0)
@@ -68,59 +70,19 @@ export default function Portfolio() {
       {/* Subtle Dark Overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-black to-gray-900/20"></div>
 
-      {/* Floating Edge Elements */}
+      {/* Floating Edge Elements (reduced for performance) */}
       <div className="fixed inset-0 pointer-events-none z-10">
         {/* Top Edge Floating Line */}
         <div
           className="absolute top-20 w-full h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent"
-          style={{
-            transform: `translateX(${Math.sin(scrollY * 0.01) * 100}px)`,
-            transition: "transform 0.1s ease-out",
-          }}
         ></div>
-
         {/* Left Edge Floating Element */}
         <div
           className="absolute left-0 top-1/4 w-1 h-32 bg-gradient-to-b from-transparent via-purple-500/20 to-transparent"
-          style={{
-            transform: `translateY(${scrollY * 0.3}px)`,
-            transition: "transform 0.1s ease-out",
-          }}
         ></div>
-
         {/* Right Edge Floating Element */}
         <div
           className="absolute right-0 top-1/2 w-1 h-24 bg-gradient-to-b from-transparent via-purple-500/20 to-transparent"
-          style={{
-            transform: `translateY(${-scrollY * 0.2}px)`,
-            transition: "transform 0.1s ease-out",
-          }}
-        ></div>
-
-        {/* Bottom Edge Floating Line */}
-        <div
-          className="absolute bottom-32 w-full h-px bg-gradient-to-r from-transparent via-purple-500/20 to-transparent"
-          style={{
-            transform: `translateX(${-Math.sin(scrollY * 0.008) * 150}px)`,
-            transition: "transform 0.1s ease-out",
-          }}
-        ></div>
-
-        {/* Diagonal Floating Elements */}
-        <div
-          className="absolute top-1/3 left-10 w-px h-16 bg-gradient-to-b from-purple-500/30 to-transparent rotate-45"
-          style={{
-            transform: `translateY(${scrollY * 0.15}px) rotate(45deg)`,
-            transition: "transform 0.1s ease-out",
-          }}
-        ></div>
-
-        <div
-          className="absolute bottom-1/3 right-10 w-px h-20 bg-gradient-to-t from-purple-500/30 to-transparent -rotate-45"
-          style={{
-            transform: `translateY(${-scrollY * 0.1}px) rotate(-45deg)`,
-            transition: "transform 0.1s ease-out",
-          }}
         ></div>
       </div>
 
@@ -150,28 +112,13 @@ export default function Portfolio() {
       {/* Hero Section - Side by Side Layout */}
       <section className="relative pt-40 pb-32 px-8 lg:px-12">
         <div className="max-w-8xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            {/* Profile Image */}
+          <div className="grid lg:grid-cols-2 gap-10 items-center"> {/* Decreased gap */}
+            {/* Name and Info (now on the left) */}
             <div
-              className={`relative transition-all duration-1200 ease-out ${
-                isVisible ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0"
-              }`}
+              className="space-y-10 order-2 lg:order-1"
+              style={{ marginLeft: "12rem" }}
             >
-              <div className="relative w-96 h-96 mx-auto lg:mx-0">
-                <div className="absolute inset-0 bg-purple-500/20 rounded-3xl blur-3xl"></div>
-                <div className="relative w-full h-full rounded-3xl overflow-hidden border border-gray-800/50 backdrop-blur-sm bg-gray-900/20 shadow-2xl">
-                  <Image src="/images/profile.png" alt="Fisiha Desta" fill className="object-cover" priority />
-                </div>
-              </div>
-            </div>
-
-            {/* Name and Info */}
-            <div
-              className={`space-y-12 transition-all duration-1200 ease-out delay-300 ${
-                isVisible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0"
-              }`}
-            >
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <h1 className="text-6xl lg:text-8xl font-light tracking-tight leading-none">
                   <span className="text-foreground font-extralight">Fisiha Desta</span>
                 </h1>
@@ -184,7 +131,7 @@ export default function Portfolio() {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 pt-8">
+              <div className="flex flex-col sm:flex-row gap-4 pt-6">
                 <Button
                   size="lg"
                   className="bg-white text-black hover:bg-gray-100 rounded-2xl px-10 py-6 transition-all duration-300 hover:scale-105 shadow-xl font-medium tracking-wide"
@@ -201,6 +148,16 @@ export default function Portfolio() {
                   Get In Touch
                   <ArrowRight className="w-4 h-4 ml-3" />
                 </Button>
+              </div>
+            </div>
+            {/* Profile Image with Border and Floating Boxes (now on the right) */}
+            <div className="relative flex items-center justify-center order-1 lg:order-2">
+              <div className="relative w-[36rem] h-[36rem] flex items-center justify-center"> {/* Even bigger image */}
+                <ProfileImageWithBorder />
+                <div className="z-50">
+                  <FloatingInfoBox text="React Developer" style={{ bottom: 90, left: -10, background: 'rgba(255,255,255,0.7)', color: 'black', fontWeight: 600, boxShadow: '0 4px 24px 0 rgba(124,58,237,0.10)', border: '1.5px solid #e9d5ff', backdropFilter: 'blur(8px)', zIndex: 50 }} />
+                  <FloatingInfoBox text="UI/UX Designer" style={{ bottom: 40, right: 40, background: 'rgba(255,255,255,0.7)', color: 'black', fontWeight: 600, boxShadow: '0 4px 24px 0 rgba(124,58,237,0.10)', border: '1.5px solid #e9d5ff', backdropFilter: 'blur(8px)', zIndex: 50 }} />
+                </div>
               </div>
             </div>
           </div>
