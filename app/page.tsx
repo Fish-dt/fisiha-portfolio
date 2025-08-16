@@ -27,7 +27,6 @@ export default function Portfolio() {
   const [scrollY, setScrollY] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null)
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY)
@@ -287,14 +286,14 @@ export default function Portfolio() {
         {/* Hero Section - Side by Side Layout */}
         <section className="relative pt-40 pb-20 px-8 lg:px-12">
           <div className="max-w-8xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Profile Image with Pink Gradient Background */}
               <div
                 className={`relative transition-all duration-800 ease-out ${
                   isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
                 }`}
               >
-                <div className="relative w-96 h-96 mx-auto lg:mx-0">
+                <div className="relative w-96 h-96 mx-auto lg:ml-16 lg:mr-0">
                   {/* Pink gradient background like Neue Machina image */}
                   <div className="absolute inset-0 bg-gradient-to-br from-neon-pink via-orange-400 to-yellow-300 rounded-full blur-3xl opacity-80"></div>
                   <div className="absolute inset-2 bg-gradient-to-br from-neon-pink/60 via-orange-400/60 to-yellow-300/60 rounded-full blur-2xl"></div>
@@ -352,6 +351,7 @@ export default function Portfolio() {
                   <Button
                     size="lg"
                     className="bg-gradient-to-r from-electric-blue to-neon-pink hover:from-electric-blue/80 hover:to-neon-pink/80 text-white rounded-2xl px-10 py-6 transition-all duration-300 hover:scale-105 shadow-xl shadow-electric-blue/20 font-medium tracking-wide"
+                    onClick={() => window.open('/cv/Fisiha-Desta-CV.pdf', '_blank')}
                   >
                     <Download className="w-5 h-5 mr-3" />
                     Download Resume
@@ -360,6 +360,7 @@ export default function Portfolio() {
                     variant="outline"
                     size="lg"
                     className="border-white/20 text-white hover:bg-white/10 rounded-2xl px-10 py-6 transition-all duration-300 hover:scale-105 backdrop-blur-sm bg-transparent font-medium tracking-wide"
+                    onClick={() => window.location.href = 'mailto:fissehadesta70@gmail.com'}
                   >
                     <Mail className="w-5 h-5 mr-3" />
                     Get In Touch
@@ -387,8 +388,6 @@ export default function Portfolio() {
               <div
                 className="relative w-[650px] lg:w-[750px] h-[400px] lg:h-[480px] cursor-pointer transition-all duration-500 hover:scale-105"
                 style={{ zIndex: 2 }}
-                onMouseEnter={() => setHoveredImage("chereta")}
-                onMouseLeave={() => setHoveredImage(null)}
                 onClick={() => window.open("https://chereta-hub.vercel.app/auctions", "_blank")}
               >
                 <div className="w-full h-full bg-black/90 rounded-3xl border-2 border-electric-blue/40 overflow-hidden shadow-2xl backdrop-blur-sm relative animate-glow">
@@ -427,9 +426,7 @@ export default function Portfolio() {
                         src="/images/chereta-hub-new.png"
                         alt="Chereta Hub Auction Platform"
                         fill
-                        className={`object-cover object-top transition-transform duration-500 ${
-                          hoveredImage === "chereta" ? "scale-110" : "scale-100"
-                        }`}
+                        className="object-cover object-top"
                         priority
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
@@ -442,25 +439,21 @@ export default function Portfolio() {
                 <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 w-40 h-4 bg-gray-700 rounded-full shadow-xl"></div>
               </div>
 
-              {/* Left Screen - EthiStudy (Bottom Positioned) */}
+              {/* Left Screen - EthiStudy (Aligned to bottom of center image) */}
               <div
-                className="absolute left-4 lg:left-8 bottom-8 w-80 lg:w-[400px] h-48 lg:h-56 opacity-90 cursor-pointer transition-all duration-500 hover:scale-110 hover:z-50"
+                className="relative w-80 lg:w-[400px] h-48 lg:h-56 opacity-90 cursor-pointer transition-all duration-500 hover:scale-110 hover:z-50"
                 style={{ zIndex: 1 }}
-                onMouseEnter={() => setHoveredImage("ethistudy")}
-                onMouseLeave={() => setHoveredImage(null)}
                 onClick={() => window.open("https://ethistudy.vercel.app/", "_blank")}
               >
                 <div className="w-full h-full bg-black/80 rounded-2xl border-2 border-electric-blue/30 overflow-hidden shadow-2xl relative backdrop-blur-sm animate-glow">
-                  <div className="absolute inset-0 bg-gradient-to-r from-electric-blue/20 to-neon-purple/20 rounded-2xl blur-sm"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-electric-blue/20 to-neon-purple/20 rounded-2xl blur-lg"></div>
                   <div className="relative w-full h-full bg-black/80 rounded-2xl overflow-hidden backdrop-blur-sm">
                     <div className="h-full relative overflow-hidden">
                       <Image
                         src="/images/ethistudy-dashboard.png"
                         alt="EthiStudy Educational Platform"
                         fill
-                        className={`object-cover object-top transition-transform duration-500 ${
-                          hoveredImage === "ethistudy" ? "scale-110" : "scale-100"
-                        }`}
+                        className="object-cover object-top"
                         priority
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
@@ -489,14 +482,14 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Right Screen - Graphic Design (Bottom Positioned) */}
+              {/* Right Screen - Graphic Design (Aligned to bottom of center image) */}
               <div
-                className="absolute right-4 lg:right-8 bottom-8 w-80 lg:w-[400px] h-48 lg:h-56 opacity-90 cursor-pointer transition-all duration-500 hover:scale-110 hover:z-50"
+                className="relative w-80 lg:w-[400px] h-48 lg:h-56 opacity-90 cursor-pointer transition-all duration-500 hover:scale-110 hover:z-50"
                 style={{ zIndex: 1 }}
                 onClick={() => setIsModalOpen(true)}
               >
                 <div className="w-full h-full bg-black/80 rounded-2xl border-2 border-neon-pink/30 overflow-hidden shadow-2xl relative backdrop-blur-sm animate-glow">
-                  <div className="absolute inset-0 bg-gradient-to-r from-neon-pink/20 to-purple-500/20 rounded-2xl blur-sm"></div>
+                  <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink/20 to-purple-500/20 rounded-2xl blur-lg"></div>
                   <div className="relative w-full h-full bg-black/80 rounded-2xl overflow-hidden backdrop-blur-sm">
                     <div className="h-full relative overflow-hidden">
                       <Image
@@ -545,11 +538,11 @@ export default function Portfolio() {
                         className="flex flex-col items-center gap-2 p-2 rounded-xl hover:bg-white/5 transition-all duration-300 group"
                         title={skill.name}
                       >
-                        <div className="w-8 h-8 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                           <img
                             src={skill.icon || "/placeholder.svg"}
                             alt={skill.name}
-                            className="w-6 h-6 object-contain"
+                            className="w-8 h-8 object-contain"
                             onError={(e) => {
                               e.currentTarget.style.display = "none"
                             }}
