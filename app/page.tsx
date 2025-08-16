@@ -82,11 +82,6 @@ export default function Portfolio() {
           name: "Git",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
         },
-      ],
-    },
-    {
-      title: "Database & Backend",
-      skills: [
         {
           name: "MySQL",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
@@ -99,6 +94,11 @@ export default function Portfolio() {
           name: "PostgreSQL",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
         },
+      ],
+    },
+    {
+      title: "Data Science",
+      skills: [
         {
           name: "Python",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
@@ -115,6 +115,10 @@ export default function Portfolio() {
           name: "Matplotlib",
           icon: "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg",
         },
+        {
+          name: "Scikit-learn",
+          icon: "https://scikit-learn.org/stable/_images/scikit-learn-logo-small.png",
+        },
       ],
     },
     {
@@ -122,11 +126,11 @@ export default function Portfolio() {
       skills: [
         {
           name: "Photoshop",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg",
         },
         {
           name: "Illustrator",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
         },
         {
           name: "Figma",
@@ -386,7 +390,7 @@ export default function Portfolio() {
             <div className="flex justify-center items-center">
               {/* Main Project Screen - Chereta Hub with Enhanced Glowing Effects */}
               <div
-                className="relative w-[800px] lg:w-[1000px] h-[500px] lg:h-[600px] cursor-pointer transition-all duration-500 hover:scale-105"
+                className="relative w-[900px] lg:w-[1200px] h-[550px] lg:h-[700px] cursor-pointer transition-all duration-500 hover:scale-105"
                 onClick={() => window.open("https://chereta-hub.vercel.app/auctions", "_blank")}
               >
                 {/* Enhanced Glowing Background like Profile Image */}
@@ -459,10 +463,10 @@ export default function Portfolio() {
             {/* Three Column Compact Layout */}
             <div className="grid md:grid-cols-12 gap-8">
               {/* Web Development - Wider column */}
-              <div className="md:col-span-5">
+              <div className="md:col-span-6">
                 <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 h-full">
                   <h3 className="text-xl font-bold text-white text-center tracking-wide mb-6">Web Development</h3>
-                  <div className="grid grid-cols-5 gap-3">
+                  <div className="grid grid-cols-4 gap-3">
                     {skillCategories[0].skills.map((skill, skillIndex) => (
                       <div
                         key={skillIndex}
@@ -488,11 +492,11 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* Database & Backend - Medium column */}
-              <div className="md:col-span-4">
+              {/* Data Science - Medium column */}
+              <div className="md:col-span-3">
                 <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 h-full">
-                  <h3 className="text-xl font-bold text-white text-center tracking-wide mb-6">Database & Backend</h3>
-                  <div className="grid grid-cols-4 gap-3">
+                  <h3 className="text-xl font-bold text-white text-center tracking-wide mb-6">Data Science</h3>
+                  <div className="grid grid-cols-3 gap-3">
                     {skillCategories[1].skills.map((skill, skillIndex) => (
                       <div
                         key={skillIndex}
