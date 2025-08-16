@@ -67,31 +67,6 @@ export default function Portfolio() {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
         },
         {
-          name: "MySQL",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-        },
-        {
-          name: "MongoDB",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-        },
-      ],
-    },
-    {
-      title: "Graphics & Design",
-      skills: [
-        {
-          name: "Photoshop",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
-        },
-        {
-          name: "Illustrator",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
-        },
-        {
-          name: "Figma",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-        },
-        {
           name: "HTML5",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
         },
@@ -103,11 +78,27 @@ export default function Portfolio() {
           name: "Tailwind",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
         },
+        {
+          name: "Git",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+        },
       ],
     },
     {
-      title: "Data Science",
+      title: "Database & Backend",
       skills: [
+        {
+          name: "MySQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+        },
+        {
+          name: "MongoDB",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+        },
+        {
+          name: "PostgreSQL",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+        },
         {
           name: "Python",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
@@ -124,13 +115,22 @@ export default function Portfolio() {
           name: "Matplotlib",
           icon: "https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg",
         },
+      ],
+    },
+    {
+      title: "Design & Graphics",
+      skills: [
         {
-          name: "PostgreSQL",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+          name: "Photoshop",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg",
         },
         {
-          name: "Git",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+          name: "Illustrator",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/illustrator/illustrator-plain.svg",
+        },
+        {
+          name: "Figma",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
         },
       ],
     },
@@ -372,7 +372,7 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Featured Work Section - Three Screens with Bottom Positioning */}
+        {/* Featured Work Section - Single Project with Glowing Effects */}
         <section className="relative py-16 px-8 lg:px-12">
           <div className="max-w-8xl mx-auto">
             <div className="text-center mb-16">
@@ -382,23 +382,27 @@ export default function Portfolio() {
               </p>
             </div>
 
-            {/* Three Screen Setup with Bottom Positioning */}
-            <div className="relative flex justify-center items-center h-[600px] lg:h-[700px]">
-              {/* Main Center Screen - Chereta Hub */}
+            {/* Single Project Display with Glowing Effects */}
+            <div className="flex justify-center items-center">
+              {/* Main Project Screen - Chereta Hub with Enhanced Glowing Effects */}
               <div
-                className="relative w-[650px] lg:w-[750px] h-[400px] lg:h-[480px] cursor-pointer transition-all duration-500 hover:scale-105"
-                style={{ zIndex: 2 }}
+                className="relative w-[800px] lg:w-[1000px] h-[500px] lg:h-[600px] cursor-pointer transition-all duration-500 hover:scale-105"
                 onClick={() => window.open("https://chereta-hub.vercel.app/auctions", "_blank")}
               >
-                <div className="w-full h-full bg-black/90 rounded-3xl border-2 border-electric-blue/40 overflow-hidden shadow-2xl backdrop-blur-sm relative animate-glow">
+                {/* Enhanced Glowing Background like Profile Image */}
+                <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/20 via-neon-pink/20 to-electric-blue/20 rounded-3xl blur-3xl opacity-60"></div>
+                <div className="absolute inset-2 bg-gradient-to-br from-electric-blue/10 via-neon-pink/10 to-electric-blue/10 rounded-3xl blur-2xl"></div>
+                
+                <div className="relative w-full h-full bg-black/90 rounded-3xl border-2 border-electric-blue/40 overflow-hidden shadow-2xl backdrop-blur-sm animate-glow">
                   <div className="absolute -inset-1 bg-gradient-to-r from-electric-blue/30 via-neon-pink/30 to-electric-blue/30 rounded-3xl blur-lg"></div>
                   <div className="relative w-full h-full bg-black/90 rounded-3xl overflow-hidden backdrop-blur-sm">
-                    <div className="h-12 bg-black/90 flex items-center justify-between px-6 gap-3 backdrop-blur-sm border-b border-electric-blue/20">
+                    {/* Reduced Header Height */}
+                    <div className="h-6 bg-black/90 flex items-center justify-between px-6 gap-3 backdrop-blur-sm border-b border-electric-blue/20">
                       <div className="flex items-center gap-3">
-                        <div className="w-4 h-4 bg-red-500 rounded-full"></div>
-                        <div className="w-4 h-4 bg-yellow-500 rounded-full"></div>
-                        <div className="w-4 h-4 bg-green-500 rounded-full"></div>
-                        <div className="ml-6 text-sm text-gray-200 font-medium">Chereta Hub - Auction Platform</div>
+                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <div className="ml-4 text-xs text-gray-200 font-medium">Chereta Hub - Auction Platform</div>
                       </div>
                       <div className="flex items-center gap-2">
                         <button
@@ -408,7 +412,7 @@ export default function Portfolio() {
                           }}
                           className="p-1 hover:bg-white/10 rounded transition-colors"
                         >
-                          <ExternalLink className="w-4 h-4 text-gray-400 hover:text-white" />
+                          <ExternalLink className="w-3 h-3 text-gray-400 hover:text-white" />
                         </button>
                         <button
                           onClick={(e) => {
@@ -417,7 +421,7 @@ export default function Portfolio() {
                           }}
                           className="p-1 hover:bg-white/10 rounded transition-colors"
                         >
-                          <Github className="w-4 h-4 text-gray-400 hover:text-white" />
+                          <Github className="w-3 h-3 text-gray-400 hover:text-white" />
                         </button>
                       </div>
                     </div>
@@ -435,85 +439,14 @@ export default function Portfolio() {
                 </div>
 
                 {/* Enhanced Screen Stand */}
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-24 h-8 bg-gray-800 rounded-b-3xl shadow-lg"></div>
-                <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2 w-40 h-4 bg-gray-700 rounded-full shadow-xl"></div>
-              </div>
-
-              {/* Left Screen - EthiStudy (Aligned to bottom of center image) */}
-              <div
-                className="relative w-80 lg:w-[400px] h-48 lg:h-56 opacity-90 cursor-pointer transition-all duration-500 hover:scale-110 hover:z-50"
-                style={{ zIndex: 1 }}
-                onClick={() => window.open("https://ethistudy.vercel.app/", "_blank")}
-              >
-                <div className="w-full h-full bg-black/80 rounded-2xl border-2 border-electric-blue/30 overflow-hidden shadow-2xl relative backdrop-blur-sm animate-glow">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-electric-blue/20 to-neon-purple/20 rounded-2xl blur-lg"></div>
-                  <div className="relative w-full h-full bg-black/80 rounded-2xl overflow-hidden backdrop-blur-sm">
-                    <div className="h-full relative overflow-hidden">
-                      <Image
-                        src="/images/ethistudy-dashboard.png"
-                        alt="EthiStudy Educational Platform"
-                        fill
-                        className="object-cover object-top"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                      <div className="absolute top-2 right-2 flex items-center gap-1">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            window.open("https://ethistudy.vercel.app/", "_blank")
-                          }}
-                          className="p-1 hover:bg-white/10 rounded transition-colors"
-                        >
-                          <ExternalLink className="w-3 h-3 text-gray-400 hover:text-white" />
-                        </button>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            window.open("https://github.com/Fish-dt/ethistudy-dashboard", "_blank")
-                          }}
-                          className="p-1 hover:bg-white/10 rounded transition-colors"
-                        >
-                          <Github className="w-3 h-3 text-gray-400 hover:text-white" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Screen - Graphic Design (Aligned to bottom of center image) */}
-              <div
-                className="relative w-80 lg:w-[400px] h-48 lg:h-56 opacity-90 cursor-pointer transition-all duration-500 hover:scale-110 hover:z-50"
-                style={{ zIndex: 1 }}
-                onClick={() => setIsModalOpen(true)}
-              >
-                <div className="w-full h-full bg-black/80 rounded-2xl border-2 border-neon-pink/30 overflow-hidden shadow-2xl relative backdrop-blur-sm animate-glow">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-neon-pink/20 to-purple-500/20 rounded-2xl blur-lg"></div>
-                  <div className="relative w-full h-full bg-black/80 rounded-2xl overflow-hidden backdrop-blur-sm">
-                    <div className="h-full relative overflow-hidden">
-                      <Image
-                        src="/images/graphic-design-portfolio.jpg"
-                        alt="Graphic Design Portfolio"
-                        fill
-                        className="object-cover object-center"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-                      <div className="absolute top-2 right-2">
-                        <button className="p-1 hover:bg-white/10 rounded transition-colors">
-                          <Layers className="w-3 h-3 text-gray-400 hover:text-white" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-32 h-10 bg-gray-800 rounded-b-3xl shadow-lg"></div>
+                <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-48 h-5 bg-gray-700 rounded-full shadow-xl"></div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Skills Section - Compact Glassmorphic */}
+        {/* Skills Section - Compact */}
         <section id="skills" className="relative py-12 px-8 lg:px-12">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -524,15 +457,13 @@ export default function Portfolio() {
             </div>
 
             {/* Three Column Compact Layout */}
-            <div className="grid md:grid-cols-3 gap-8">
-              {skillCategories.map((category, categoryIndex) => (
-                <div
-                  key={categoryIndex}
-                  className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white text-center tracking-wide mb-6">{category.title}</h3>
-                  <div className="grid grid-cols-4 gap-3">
-                    {category.skills.map((skill, skillIndex) => (
+            <div className="grid md:grid-cols-12 gap-8">
+              {/* Web Development - Wider column */}
+              <div className="md:col-span-5">
+                <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 h-full">
+                  <h3 className="text-xl font-bold text-white text-center tracking-wide mb-6">Web Development</h3>
+                  <div className="grid grid-cols-5 gap-3">
+                    {skillCategories[0].skills.map((skill, skillIndex) => (
                       <div
                         key={skillIndex}
                         className="flex flex-col items-center gap-2 p-2 rounded-xl hover:bg-white/5 transition-all duration-300 group"
@@ -555,7 +486,67 @@ export default function Portfolio() {
                     ))}
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Database & Backend - Medium column */}
+              <div className="md:col-span-4">
+                <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 h-full">
+                  <h3 className="text-xl font-bold text-white text-center tracking-wide mb-6">Database & Backend</h3>
+                  <div className="grid grid-cols-4 gap-3">
+                    {skillCategories[1].skills.map((skill, skillIndex) => (
+                      <div
+                        key={skillIndex}
+                        className="flex flex-col items-center gap-2 p-2 rounded-xl hover:bg-white/5 transition-all duration-300 group"
+                        title={skill.name}
+                      >
+                        <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <img
+                            src={skill.icon || "/placeholder.svg"}
+                            alt={skill.name}
+                            className="w-8 h-8 object-contain"
+                            onError={(e) => {
+                              e.currentTarget.style.display = "none"
+                            }}
+                          />
+                        </div>
+                        <span className="text-white text-xs font-light tracking-wide text-center leading-tight">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Design & Graphics - Smaller column */}
+              <div className="md:col-span-3">
+                <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 shadow-2xl hover:bg-white/10 transition-all duration-300 h-full">
+                  <h3 className="text-xl font-bold text-white text-center tracking-wide mb-6">Design & Graphics</h3>
+                  <div className="grid grid-cols-3 gap-3">
+                    {skillCategories[2].skills.map((skill, skillIndex) => (
+                      <div
+                        key={skillIndex}
+                        className="flex flex-col items-center gap-2 p-2 rounded-xl hover:bg-white/5 transition-all duration-300 group"
+                        title={skill.name}
+                      >
+                        <div className="w-10 h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <img
+                            src={skill.icon || "/placeholder.svg"}
+                            alt={skill.name}
+                            className="w-8 h-8 object-contain"
+                            onError={(e) => {
+                              e.currentTarget.style.display = "none"
+                            }}
+                          />
+                        </div>
+                        <span className="text-white text-xs font-light tracking-wide text-center leading-tight">
+                          {skill.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
