@@ -21,7 +21,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         "neue-machina": ["Neue Machina", "system-ui", "sans-serif"],
-        "sans": ["Neue Machina", "system-ui", "sans-serif"],
+        "sans": ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

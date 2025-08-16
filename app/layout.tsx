@@ -37,6 +37,11 @@ export default function RootLayout({
             font-style: normal;
             font-display: swap;
           }
+          @font-face {
+            font-family: 'Inter';
+            src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+            font-display: swap;
+          }
         `}</style>
       </head>
       <body className="font-sans antialiased">{children}</body>

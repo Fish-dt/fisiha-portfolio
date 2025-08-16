@@ -55,10 +55,6 @@ export default function Portfolio() {
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
         },
         {
-          name: "Angular",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg",
-        },
-        {
           name: "Node.js",
           icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
         },
@@ -76,7 +72,7 @@ export default function Portfolio() {
         },
         {
           name: "Tailwind",
-          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_logo.svg",
         },
         {
           name: "Git",
@@ -117,7 +113,7 @@ export default function Portfolio() {
         },
         {
           name: "Scikit-learn",
-          icon: "https://scikit-learn.org/stable/_images/scikit-learn-logo-small.png",
+          icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg",
         },
       ],
     },
@@ -339,7 +335,7 @@ export default function Portfolio() {
                 }`}
               >
                 <div className="space-y-8">
-                  <h1 className="text-6xl lg:text-8xl font-black tracking-tight leading-none">
+                  <h1 className="text-6xl lg:text-8xl font-black tracking-tight leading-none font-neue-machina">
                     <span className="text-white">Fisiha Desta</span>
                   </h1>
                   <p className="text-2xl lg:text-3xl font-medium bg-gradient-to-r from-electric-blue to-neon-pink bg-clip-text text-transparent tracking-wide">
@@ -380,7 +376,7 @@ export default function Portfolio() {
         <section className="relative py-16 px-8 lg:px-12">
           <div className="max-w-8xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-6xl font-black mb-6 text-white tracking-tight">Featured Work</h2>
+              <h2 className="text-4xl lg:text-6xl font-black mb-6 text-white tracking-tight font-neue-machina">Featured Work</h2>
               <p className="text-lg text-gray-300 font-light tracking-wide">
                 A glimpse into my latest projects and designs
               </p>
@@ -454,7 +450,7 @@ export default function Portfolio() {
         <section id="skills" className="relative py-12 px-8 lg:px-12">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl lg:text-5xl font-black mb-6 text-white tracking-tight">Technical Skills</h2>
+              <h2 className="text-4xl lg:text-5xl font-black mb-6 text-white tracking-tight font-neue-machina">Technical Skills</h2>
               <p className="text-lg text-gray-300 font-light tracking-wide">
                 Proficient in modern technologies and design tools
               </p>
@@ -559,7 +555,7 @@ export default function Portfolio() {
         <section id="projects" className="relative py-16 px-8 lg:px-12">
           <div className="max-w-8xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-5xl lg:text-7xl font-black mb-8 text-white tracking-tight">Projects</h2>
+              <h2 className="text-5xl lg:text-7xl font-black mb-8 text-white tracking-tight font-neue-machina">Projects</h2>
               <p className="text-xl text-gray-300 font-light tracking-wide">
                 Showcase of my web development and graphic design projects
               </p>
@@ -637,7 +633,7 @@ export default function Portfolio() {
         <section id="contact" className="relative py-16 px-8 lg:px-12">
           <div className="max-w-8xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-5xl lg:text-7xl font-black mb-8 text-white tracking-tight">Get In Touch</h2>
+              <h2 className="text-5xl lg:text-7xl font-black mb-8 text-white tracking-tight font-neue-machina">Get In Touch</h2>
               <p className="text-xl text-gray-300 font-light tracking-wide">
                 Let's discuss opportunities and collaborate on exciting projects
               </p>
