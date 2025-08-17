@@ -273,18 +273,13 @@ export default function Portfolio() {
               <Button variant="ghost" size="sm" className="text-white">
                 <Menu className="w-5 h-5" />
               </Button>
-              <Button variant="ghost" size="sm" className="text-white">
-                <ExternalLink className="w-5 h-5" />
-              </Button>
-              <Button variant="ghost" size="sm" className="text-white">
-                <Code className="w-5 h-5" />
-              </Button>
+              
             </div>
           </nav>
         </header>
 
         {/* Hero Section - Side by Side Layout */}
-        <section className="relative pt-40 pb-20 px-8 lg:px-12">
+        <section className="relative pt-40 pb-20 px-8 mx-12 lg:px-12 mx-12">
           <div className="max-w-8xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Profile Image with Pink Gradient Background */}
@@ -299,24 +294,24 @@ export default function Portfolio() {
                   <div className="absolute inset-2 bg-gradient-to-br from-neon-pink/60 via-orange-400/60 to-yellow-300/60 rounded-full blur-2xl"></div>
 
                   {/* Static UI Elements around profile */}
-                  <div className="absolute -top-8 -left-8 w-24 h-16 bg-black/60 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center">
+                  <div className="absolute -top-8 -left-8 w-20 h-14 bg-black/60 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center">
                     <Code className="w-6 h-6 text-electric-blue" />
                   </div>
 
-                  <div className="absolute -top-4 -right-12 w-20 h-12 bg-black/60 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center">
+                  <div className="absolute -top-4 -right-12 w-20 h-14 bg-black/60 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center">
                     <Palette className="w-5 h-5 text-neon-pink" />
                   </div>
 
-                  <div className="absolute -bottom-6 -left-12 w-28 h-14 bg-black/60 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center">
+                  <div className="absolute -bottom-6 -left-12 w-20 h-14 bg-black/60 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center">
                     <Database className="w-6 h-6 text-blue-400" />
                   </div>
 
-                  <div className="absolute -bottom-8 -right-8 w-22 h-12 bg-black/60 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center">
+                  <div className="absolute -bottom-8 -right-8 w-20 h-14 bg-black/60 backdrop-blur-sm border border-white/20 rounded-xl flex items-center justify-center">
                     <Server className="w-5 h-5 text-purple-400" />
                   </div>
 
                   {/* Profile image container */}
-                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm bg-transparent shadow-2xl shadow-neon-pink/20">
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm bg-gradient-to-br from-neon-pink via-orange-400 to-yellow-300 shadow-2xl shadow-neon-pink/20">
                     <Image
                       src="/images/profile.jpg"
                       alt="Fisiha Desta"
@@ -386,7 +381,7 @@ export default function Portfolio() {
             <div className="flex justify-center items-center">
               {/* Main Project Screen - Chereta Hub with Enhanced Glowing Effects */}
               <div
-                className="relative w-[900px] lg:w-[1200px] h-[550px] lg:h-[700px] cursor-pointer transition-all duration-500 hover:scale-105"
+                className="relative w-[900px] lg:w-[1200px] h-[550px] lg:h-[700px] cursor-pointer transition-all duration-100 hover:scale-105"
                 onClick={() => window.open("https://chereta-hub.vercel.app/auctions", "_blank")}
               >
                 {/* Enhanced Glowing Background like Profile Image */}
@@ -439,9 +434,7 @@ export default function Portfolio() {
                 </div>
 
                 {/* Enhanced Screen Stand */}
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-32 h-10 bg-gray-800 rounded-b-3xl shadow-lg"></div>
-                <div className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-48 h-5 bg-gray-700 rounded-full shadow-xl"></div>
-              </div>
+                </div>
             </div>
           </div>
         </section>
@@ -647,7 +640,7 @@ export default function Portfolio() {
                     {[
                       { icon: Mail, text: "fissehadesta70@gmail.com" },
                       { icon: Phone, text: "+251932550454" },
-                      { icon: MapPin, text: "Hawassa, Ethiopia" },
+                      { icon: MapPin, text: "Addis Ababa, Ethiopia" },
                     ].map((contact, index) => (
                       <div key={index} className="flex items-center gap-4">
                         <div className="p-3 rounded-2xl bg-gradient-to-r from-electric-blue/20 to-neon-pink/20 border border-white/20">
