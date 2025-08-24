@@ -381,7 +381,7 @@ export default function Portfolio() {
             <div className="flex justify-center items-center">
               {/* Main Project Screen - Chereta Hub with Enhanced Glowing Effects */}
               <div
-                className="relative w-[900px] lg:w-[1200px] h-[550px] lg:h-[700px] cursor-pointer transition-all duration-100 hover:scale-105"
+                className="relative w-[900px] lg:w-[1200px] h-[550px] lg:h-[700px] cursor-pointer "
                 onClick={() => window.open("https://chereta-hub.vercel.app/auctions", "_blank")}
               >
                 {/* Enhanced Glowing Background like Profile Image */}
