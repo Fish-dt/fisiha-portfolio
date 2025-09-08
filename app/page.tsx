@@ -367,77 +367,53 @@ export default function Portfolio() {
           </div>
         </section>
 
-        {/* Featured Work Section - Single Project with Glowing Effects */}
-        <section className="relative py-16 px-8 lg:px-12">
-          <div className="max-w-8xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-6xl font-black mb-6 text-white tracking-tight font-neue-machina">Featured Work</h2>
-              <p className="text-lg text-gray-300 font-light tracking-wide">
-                A glimpse into my latest projects and designs
-              </p>
+        <section className="py-12 px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-center items-start relative">
+            <div className="absolute left-32 top-16 z-0">
+              <div className="relative w-[366px] lg:w-[440px] h-[170px] lg:h-[230px] p-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg opacity-70">
+                <div className="relative w-full h-full rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/bb.png"
+                    alt="Background Project Left"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
 
-            {/* Single Project Display with Glowing Effects */}
-            <div className="flex justify-center items-center">
-              {/* Main Project Screen - Chereta Hub with Enhanced Glowing Effects */}
-              <div
-                className="relative w-[900px] lg:w-[1200px] h-[550px] lg:h-[700px] cursor-pointer "
-                onClick={() => window.open("https://chereta-hub.vercel.app/auctions", "_blank")}
-              >
-                {/* Enhanced Glowing Background like Profile Image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/20 via-neon-pink/20 to-electric-blue/20 rounded-3xl blur-3xl opacity-60"></div>
-                <div className="absolute inset-2 bg-gradient-to-br from-electric-blue/10 via-neon-pink/10 to-electric-blue/10 rounded-3xl blur-2xl"></div>
-                
-                <div className="relative w-full h-full bg-black/90 rounded-3xl border-2 border-electric-blue/40 overflow-hidden shadow-2xl backdrop-blur-sm animate-glow">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-electric-blue/30 via-neon-pink/30 to-electric-blue/30 rounded-3xl blur-lg"></div>
-                  <div className="relative w-full h-full bg-black/90 rounded-3xl overflow-hidden backdrop-blur-sm">
-                    {/* Reduced Header Height */}
-                    <div className="h-6 bg-black/90 flex items-center justify-between px-6 gap-3 backdrop-blur-sm border-b border-electric-blue/20">
-                      <div className="flex items-center gap-3">
-                        <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                        <div className="ml-4 text-xs text-gray-200 font-medium">Chereta Hub - Auction Platform</div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            window.open("https://chereta-hub.vercel.app/auctions", "_blank")
-                          }}
-                          className="p-1 hover:bg-white/10 rounded transition-colors"
-                        >
-                          <ExternalLink className="w-3 h-3 text-gray-400 hover:text-white" />
-                        </button>
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation()
-                            window.open("https://github.com/Fish-dt/auction-website", "_blank")
-                          }}
-                          className="p-1 hover:bg-white/10 rounded transition-colors"
-                        >
-                          <Github className="w-3 h-3 text-gray-400 hover:text-white" />
-                        </button>
-                      </div>
-                    </div>
-                    <div className="h-full relative overflow-hidden">
-                      <Image
-                        src="/images/chereta-hub-new.png"
-                        alt="Chereta Hub Auction Platform"
-                        fill
-                        className="object-cover object-top"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
-                    </div>
-                  </div>
+            <div className="absolute right-32 top-16 z-0">
+              <div className="relative w-[366px] lg:w-[440px] h-[170px] lg:h-[230px] p-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg opacity-70">
+                <div className="relative w-full h-full rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/qq.png"
+                    alt="Background Project Right"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
+              </div>
+            </div>
 
-                {/* Enhanced Screen Stand */}
+            <div className="relative w-[366px] lg:w-[440px] h-[220px] lg:h-[294px] z-10">
+              <div className="relative w-full h-full p-4 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl shadow-lg">
+                <div className="relative w-full h-full rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/cc.png"
+                    alt="Featured Project"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Skills Section - Compact */}
         <section id="skills" className="relative py-12 px-8 lg:px-12">
