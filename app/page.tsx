@@ -138,7 +138,7 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "Chereta Hub",
+      title: "Chereta Hub - Next.js",
       icon: Code,
       gradient: "from-indigo-900/40 to-violet-900/40",
       description: "Auction platform built with modern web technologies",
@@ -151,11 +151,21 @@ export default function Portfolio() {
       title: "EthiStudy",
       icon: GraduationCap,
       gradient: "from-indigo-900/40 to-violet-900/40",
-      description: "Educational platform that helps students study effectively",
+      description: "Educational platform that helps Highschool students study and prepare for National Exams effectively",
       githubUrl: "https://github.com/Fish-dt/ethistudy-dashboard",
       demoUrl: "https://ethistudy.vercel.app/",
       type: "code",
       image: "/images/ethistudy-dashboard.png",
+    },
+    {
+      title: "Chereta Hub(php)",
+      icon: GraduationCap,
+      gradient: "from-indigo-900/40 to-violet-900/40",
+      description: "Designed and developed an Auction platform with PHP",
+      githubUrl: "#",
+      demoUrl: "https://chereta-hub.onrender.com/",
+      type: "code",
+      image: "/images/chereta-hub.png",
     },
     {
       title: "Graphic Design Portfolio",
