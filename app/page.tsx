@@ -72,7 +72,7 @@ export default function Portfolio() {
         },
         {
           name: "Tailwind",
-          icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_logo.svg",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
         },
         {
           name: "Git",
@@ -640,6 +640,11 @@ export default function Portfolio() {
                   <div className="mt-12">
                     <h4 className="text-lg font-medium mb-6 text-white tracking-wide">Connect With Me</h4>
                     <div className="flex gap-4">
+                    <a
+                      href="https://github.com/Fish-dt"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button
                         variant="outline"
                         size="sm"
@@ -648,6 +653,7 @@ export default function Portfolio() {
                         <Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Button>
+                    </a>
                       <Button
                         variant="outline"
                         size="sm"
